@@ -1,0 +1,43 @@
+Design an OO solution for the following problem and present
+it in an UML class diagram.
+
+Students will design and implement a system that automates business
+processes of a trading company.
+
+The company buys products from providers and sells them to customers.
+
+Product info includes id, name, model, brand, company, description,
+category, and SELLING PRICE. This price will be used when being copied
+to sales invoice.
+
+Category has id and name. Examples are Car, Bike, Laptop, Phone etc.
+
+Provider and customer info includes id, name, address, phone, fax, email,
+contact person (A String to represent his/her name is enough).
+
+The company will make orders to providers. Each order has info including
+id, date, staff who makes the order, and PROVIDER. Each order will have
+order details which include product, quantity and price. Info of a staff
+includes id, name, address, phone, email.
+
+Products shipped to the company will need to be recorded in inventory
+receiving notes. Each note includes id, date, staff who makes the note.
+Each note has details which include product, quantity. To make it easier
+for warehouse keepers, data of a note should be transferred from an order.
+
+When the company sells products to a customer, it will prepare inventory
+delivery notes with details such as product, quantity. When shipping
+products to the customer, the company will prepare a sale invoice with
+following details: id, date, sales staff, customer, product, quantity,
+price (this price will be copied from product price, after copying users
+can change them manually by another API if needed), total value.
+
+The system has the following basic functionalities:
+
+ + List all inventory notes, sale invoice by a period: start date and end date
+ - List all sale invoice by a customer and a sale staff in a period: start
+date and end date
+ - Search customers (by phone, address, or name)
+ - Revenue by a sale staff. Input params: start date and end date.
+ - Revenue = total value of all sales invoices in a period. Total value
+ of an invoice = all products quantity * price.

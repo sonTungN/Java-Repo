@@ -1,0 +1,80 @@
+Problem 1:
+    - Create a new file Problem1.java with only one class Problem1.
+    - Implement the following static method that prompts the user for a number
+of working days of a worker in a month, then prints each day’s pay in pennies,
+followed by the total accrued pay in dollars with a fractional part for cents
+at the end. Round the displayed pay to two decimal places.
+    - Print an error message and re-prompt the user if the entered day is a
+negative number. A worker is paid one cent for the first day’s work, 2 cents
+for the second, 4 cents for the third, and so on with, the integer pay in pennies
+being doubled each day (this variable MUST be an int).
+    - At the end of the job, she gets a single lump sum paycheck in dollars and
+cents (this is a floating-point value which needs a lot of digits of precision).
+Also, if she works more than 15 days a month, the worker will receive an extra 10
+cents per day starting from day 16. Accumulate the pay in an int, and only convert
+to a floating-point type to print the total pay.
+
+-------------------------Constraints-------------------------
+    - number of working days >= 0 and <= 31
+    - Assume that the user will input integer, so you do not have to handle InputMismatchException.
+            Examples:
+    How many days? -3
+    The number of working days cannot be negative.
+    How many days? 8
+    Pay for day 1 = 1
+    Pay for day 2 = 2
+    Pay for day 3 = 4
+    Pay for day 4 = 8
+    Pay for day 5 = 16
+    Pay for day 6 = 32
+    Pay for day 7 = 64
+    Pay for day 8 = 128
+    Total pay is $2.55
+
+
+Problem 2: OOP
+    - Create a new file Problem2.java. Use this file for the below tasks.
+You are working as a Java developer for a Marriage Registration Department. You are given the
+task of developing a program to manage people and their marital status.
+
+    - Create a class Person to model people. Person information includes SSN (String), name
+(String), and gender (character ‘F’ or ‘M’). Implement a constructor for the Person class that
+takes a String SSN, a String name, a character gender (you don’t need to validate the input data),
+and assigns those parameters to a Person object attributes. Implement a display() method to show
+detailed information of a Person object.
+
+    - Each Person object has a private spouse (which is also a Person object). The spouse attribute
+can be null if the person has no spouse yet. Develop 2 methods marry() and divorce() to manage
+the spouse attribute.
+Assume the current object is X. The parameter of marry() is a Person Y. The object Y can be
+assigned to the spouse attribute of X if all the following conditions are true:
++ X has no spouse
++ Y has no spouse
++ X and Y are different (in this implementation, you can use the “==” or “!=” operators between
+2 objects for this condition, e.g., X != Y)
++ X’s gender != Y’s.gender
+
+    - When Y becomes X’s spouse, X also becomes Y’s spouse automatically. In other words, you
+only need to call X.marry(Y) and stop. After that, Y.spouse also points to X.
+The divorce() method requires no parameter. If X has no spouse, it does nothing. If X has a
+spouse Y, it set the spouse attribute of both X and Y to null.
+
+    - Implement a displaySpouse() method for the Person class. If a Person object has no spouse,
+output “There is no spouse”. If there is a spouse, call the display() method on the spouse object
+to display the spouse information.
+
+    - In the main() method of Problem2, create the following people: ("last 2 digits of your student
+id", "Anna", ‘F’), ("first 2 digits of your student id", "Mane", ‘M’), ("55", "Carol", ‘F’) (if the
+SSNs are duplicated, no worry, because we don’t process SSNs in this problem).
+    + Part 1: call the display() method of Anna and take a screenshot.
+    + Part 2:
+
+2.1/ call the marry() method of Anna object with Carol object as the parameter, then call
+displaySpouse() of Anna object. Take a screenshot of the output.
+2.2/ call the marry() method of Anna object with Mane object as the parameter, then call
+displaySpouse() of Mane object. Take a screenshot of the output (you can remove or comment
+out the calls in previous parts if necessary).
+2.3/ call the marry() method of Anna object with Mane object as the parameter, then call
+divorce() of Mane object, then call marry() of Mane object with Carol object as the parameter,
+and finally call the displaySpouse() of Carol object. Take a screenshot of the output (you can
+remove or comment out the calls in previous parts if necessary).

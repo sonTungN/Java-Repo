@@ -1,0 +1,43 @@
+Question 1
+
+Design an OO solution for the following problem and present it in an UML class diagram.
+
+The Department of Motor Vehicles (DMV) of a fictitious country wants to build a vehicle
+registration system to manage the vehicles in that country. A vehicle has a unique vehicle
+identification number (VIN), maker, model, year, color, engine size, fuel type, and license
+plate. For example: 4Y1SL65848Z411439, Toyota, Camry, 2008, black, 2.4-liter, gasoline, 4BEX972.
+There are three types of vehicles: motorcycle, car, and truck. A motorcycle has either two
+or three wheels. A car has a seat capacity such as 5 or 7, while a truck has a load that
+it can carry such as 20 tons or 30 tons.
+
+A vehicle is either owned by a person or an organization and is registered at the DMV with
+a registration date such as 31/08/2008. A person has a name, phone, email, and address.
+An organization also has name, phone, email, address and is presented by a person as its
+legal representative.
+
+A vehicle can be sold or given to a different owner. When that happens, the current owner
+of the vehicle fills the form on the back of the current ownership paper and signed it.
+The new owner can then take this ownership paper to the DMV to request a change of the
+ownership for the vehicle. The new owner and a new registration date will be added to the
+vehicle record by the DMV. After that, the DMV issues a new ownership paper to the new owner.
+
+The system has the following functionalities:
+    - Register vehicle
+    - Search vehicles
+    - Display vehicle info (display all vehicle info including all the owners and the
+    corresponding registration dates)
+    - Change ownership
+
+
+Question 2
+
+Use IntelliJ to write a Java program that prompts the user to enter a line of alphabetic
+characters and insert an ampersand (&) between an upper-case letter and a lower-case letter.
+
+Here is an example:
+    - Input: AbQueaZ
+    - Output: A&b&Q&uea&Z
+Your program must not terminate abnormally in any situations. If there are something invalid
+in the input, the program should nicely print an error message and let the user to re-enter
+again. To receive a good mark, your program not only runs correctly but also follows all the
+programming best practices that we have learned in the course.
